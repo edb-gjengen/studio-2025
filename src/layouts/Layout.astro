@@ -1,0 +1,23 @@
+---
+import "@styles/global.css";
+import Nav from '@components/Nav.astro';
+import Footer from '@components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="no">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>STUDiO 2025 - Studentfestivalen i Oslo</title>
+	</head>
+	<body class="grid grid-rows-[auto_1fr_auto] jusify-center">
+		<Nav />
+		<div class="max-w-7xl grid place-self-center gap-8">
+			<slot />
+		</div>
+		<Footer />
+	</body>
+</html>

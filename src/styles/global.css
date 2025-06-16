@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --font-avenir: "Avenir Next", sans-serif;
+  --background: #E5E2D7;
+  --text: #333333;
+  --accent: #C13131;
+}
+
+@theme {
+  --font-avenir: var(--font-avenir);
+  --color-background: var(--background);
+  --color-text: var(--text);
+  --color-accent: var(--accent);
+}
+
+html,
+body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+}
+
+body {
+    @apply text-lg;
+    font-family: var(--font-avenir);
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+  }
+ nav a.active {
+    font-weight: bolder;
+    text-decoration: underline;
+  }

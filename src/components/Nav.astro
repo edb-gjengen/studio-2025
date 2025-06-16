@@ -1,0 +1,47 @@
+<nav class="flex justify-between items-center px-10 py-4 bg-accent mb-4">
+    <h1 class="text-xl font-bold text-white">
+        <a href="/">STUDiO 2025</a>
+    </h1>
+    <ul class="flex space-x-4 text-white">
+        <li><a href="/">Hjem</a></li>
+        <li><a href="/program">Program</a></li>
+        <li><a href="https://forms.gle/PvEh37nvRyicLFXn6" target="_blank">Bli frivillig</a></li>
+        <li><a href="/about">Om</a></li>
+        <li>
+            <button onclick={() => toggleLanguage()} class="ml-4 bg-blue-500 text-white px-3 py-1 rounded">
+                Norsk / English
+            </button>
+        </li>
+
+        <script>
+            let currentLanguage = 'no';
+
+            function toggleLanguage() {
+                currentLanguage = currentLanguage === 'no' ? 'en' : 'no';
+                const links = document.querySelectorAll('nav ul li a');
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (currentLanguage === 'en') {
+                        link.setAttribute('href', `/en-${href.slice(1)}`);
+                    } else {
+                        link.setAttribute('href', `/${href.replace('/en-', '')}`);
+                    }
+                });
+            }
+        </script>
+    </ul>
+</nav>
+
+
+<style>
+  nav a {
+    padding: 0.5em 0.5em;
+    color: var(--text);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+  nav a.active {
+    text-decoration: none;
+    border-bottom-color: var(--accent);
+  }
+</style>

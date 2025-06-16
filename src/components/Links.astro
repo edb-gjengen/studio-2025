@@ -1,0 +1,15 @@
+---
+const links = [
+    { href: "https://www.neuf.no", text: "Chateau Neuf" },
+    { href: "https://forms.gle/PvEh37nvRyicLFXn6", text: "Bli frivillig!" },
+    { href: "https://www.instagram.com/studentfestivalenioslo/", text: "Instagram" },
+    { href: "https://www.facebook.com/studentfestivalen", text: "Facebook" },
+    { href: "https://www.tiktok.com/@studentersamfund", text: "TikTok" },
+];
+---
+
+<div class="flex gap-4 justify-center items-center">
+    {links.map(link => (
+        <a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a>
+    ))}
+</div>

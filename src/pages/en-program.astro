@@ -1,0 +1,38 @@
+---
+import data from '/src/data/en-program.json';
+import Layout from '@layouts/Layout.astro';
+---
+
+<Layout>
+        {Object.entries(data).map(([dayName, items], index) => (
+            <div class="day">
+                <h2>{dayName}</h2>
+                <ul>
+                    {items.map((item, itemIndex) => (
+                        <li class="item">
+                            {item.time} - {item.event} - {item.price}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ))}
+</Layout>
+
+<style>
+            .day {
+                margin-bottom: 20px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .day:nth-child(odd) {
+                background-color: #F8BC90;
+            }
+            .day:nth-child(even) {
+                background-color: #0A0F6D;
+                color: #fff; /* Optional: Adjust text color for better readability */
+            }
+            .item {
+                margin: 5px 0;
+            }
+        </style>
