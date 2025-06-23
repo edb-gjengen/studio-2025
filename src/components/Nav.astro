@@ -1,37 +1,39 @@
+---
+import { translations } from '../data/i18n.js';
+const { lang = 'no' } = Astro.props;
+const t = translations[lang].nav;
+const { pathname } = Astro.url;
+
+function getLangSwitchPath(path, lang) {
+  if (lang === 'no') {
+    if (path === '/') return '/en/';
+    if (path.startsWith('/en/')) return path.replace('/en/', '/');
+    return '/en' + path;
+  } else {
+    if (path === '/en/' || path === '/en') return '/';
+    if (path.startsWith('/en/')) return path.replace('/en', '');
+    return path;
+  }
+}
+
+const langSwitchPath = getLangSwitchPath(pathname, lang);
+---
 <nav class="flex justify-between items-center px-10 py-4 bg-accent mb-4">
     <h1 class="text-xl font-bold text-white">
-        <a href="/">STUDiO 2025</a>
+        <a href={lang === 'en' ? '/en/' : '/'}>{t.title}</a>
     </h1>
     <ul class="flex space-x-4 text-white">
-        <li><a href="/">Hjem</a></li>
-        <li><a href="/program">Program</a></li>
-        <li><a href="https://forms.gle/PvEh37nvRyicLFXn6" target="_blank">Bli frivillig</a></li>
-        <li><a href="/about">Om</a></li>
+        <li><a href={lang === 'en' ? '/en/' : '/'}>{t.home}</a></li>
+        <li><a href={lang === 'en' ? '/en/program' : '/program'}>{t.program}</a></li>
+        <li><a href="https://forms.gle/PvEh37nvRyicLFXn6" target="_blank">{t.volunteer}</a></li>
+        <li><a href={lang === 'en' ? '/en/about' : '/about'}>{t.about}</a></li>
         <li>
-            <button onclick={() => toggleLanguage()} class="ml-4 bg-blue-500 text-white px-3 py-1 rounded">
-                Norsk / English
-            </button>
+            <a href={langSwitchPath} class="ml-4 bg-blue-500 text-white px-3 py-1 rounded">
+                {t.langSwitch}
+            </a>
         </li>
-
-        <script>
-            let currentLanguage = 'no';
-
-            function toggleLanguage() {
-                currentLanguage = currentLanguage === 'no' ? 'en' : 'no';
-                const links = document.querySelectorAll('nav ul li a');
-                links.forEach(link => {
-                    const href = link.getAttribute('href');
-                    if (currentLanguage === 'en') {
-                        link.setAttribute('href', `/en-${href.slice(1)}`);
-                    } else {
-                        link.setAttribute('href', `/${href.replace('/en-', '')}`);
-                    }
-                });
-            }
-        </script>
     </ul>
 </nav>
-
 
 <style>
   nav a {

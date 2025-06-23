@@ -3,16 +3,19 @@ import { Image } from 'astro:assets';
 import logo from '@assets/logo.png';
 import DNS  from '@assets/DNS-logo-hvit.png';
 import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
+import { translations } from '../data/i18n.js';
+const { lang = 'no' } = Astro.props;
+const t = translations[lang].footer;
 ---
 <footer class="flex items-center justify-between bg-red-900 text-white py-16 px-8 mt-20">
     <div class="flex gap-2 items-center justify-center">
-        <Image src={logo} alt="Logo for Studentfestivalen i Oslo" class="hero-logo" width={48} height={48}/>
-        <p>Studentfestivalen i Oslo 2025</p>
+        <Image src={logo} alt={t.org} class="hero-logo" width={48} height={48}/>
+        <p>{t.org}</p>
     </div>
     <div class="flex gap-2 items-center justify-center">
-        <Image src ={DNS} alt="Logo for Det Norske Studentersamfund" class="hero-logo" width={169} height={169}/>
+        <Image src={DNS} alt={t.dnsAlt} class="hero-logo" width={169} height={169}/>
     <div class="flex flex-col items-center justify-center gap-2">
-        <address>Slemdalsveien 15, 0369 Oslo</address>
+        <address>{t.address}</address>
         <div>
             <div class="flex gap-4">
                 <a href="https://www.facebook.com/events/692300293586085" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
