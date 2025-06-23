@@ -10,7 +10,11 @@ import Layout from '@layouts/Layout.astro';
                 <ul>
                     {items.map((item, itemIndex) => (
                         <li class="item">
-                            {item.time} - {item.event} - {item.price}
+                            {item.time} - {item.event} - {item.url ? (
+                                <a href={item.url} target="_blank" rel="noopener noreferrer">{item.price}</a>
+                            ) : (
+                                item.price
+                            )}
                         </li>
                     ))}
                 </ul>
