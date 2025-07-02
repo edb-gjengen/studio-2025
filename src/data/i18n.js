@@ -5,7 +5,7 @@ export const translations = {
       program: "Program",
       volunteer: "Bli frivillig",
       about: "Om",
-      langSwitch: "Norsk / English",
+      langSwitch: "English",
       title: "STUDiO 2025",
     },
     hero: {
@@ -31,19 +31,11 @@ export const translations = {
       p2: "Det blir sosiale og spennende arrangementer hver dag! Festivalen er for alle nye og gamle studenter i Oslo. Opplev høydepunktet i semesteret - ta med fadderbarna eller vennegjengen, eller kom alene og møt nye venner.",
       p3: "Ikke gå glipp av den største studiekickoffen i Oslo!",
       p4: "Flere av arrangementene våre er gratis, og alt er ID 18+.",
+      p5: 'Dersom du ønsker å lære mer om historien til Studio, samt Det Norske Studentersamfund kan du leser mer på <a href="https://viteboka.studentersamfundet.no/Studentfestivalen_i_Oslo">Viteboka</a>',
     },
-    links: [
-      { href: "https://www.neuf.no", text: "Chateau Neuf" },
-      { href: "https://forms.gle/PvEh37nvRyicLFXn6", text: "Bli frivillig!" },
-      {
-        href: "https://www.instagram.com/studentfestivalenioslo/",
-        text: "Instagram",
-      },
-      { href: "https://www.facebook.com/studentfestivalen", text: "Facebook" },
-      { href: "https://www.tiktok.com/@studentersamfund", text: "TikTok" },
-    ],
     program: {
       today: "Hva skjer i dag?",
+      program_more: "For arrangementer etter Studio trykk her",
     },
     vors: {
       text: "Sett på låta for litt stemning før dere kommer🔥",
@@ -58,9 +50,9 @@ export const translations = {
     nav: {
       home: "Home",
       program: "Program",
-      volunteer: "Become a volunteer",
+      volunteer: "Volunteer",
       about: "About",
-      langSwitch: "Norsk / English",
+      langSwitch: "Norsk",
       title: "STUDiO 2025",
     },
     hero: {
@@ -86,22 +78,11 @@ export const translations = {
       p2: "There will be social and exciting events every day! The festival is for all new and returning students in Oslo. Experience the highlight of the semester - bring your buddy group or friends, or come alone and meet new people.",
       p3: "Don't miss the biggest student kickoff in Oslo!",
       p4: "Many of our events are free, and everything is 18+.",
+      p5: 'If you want to learn more about the history of Studio, as well as The Norwegian Student Society, you can read more on <a href="https://viteboka.studentersamfundet.no/Studentfestivalen_i_Oslo">Viteboka</a>',
     },
-    links: [
-      { href: "https://www.neuf.no", text: "Chateau Neuf" },
-      {
-        href: "https://forms.gle/PvEh37nvRyicLFXn6",
-        text: "Become a volunteer!",
-      },
-      {
-        href: "https://www.instagram.com/studentfestivalenioslo/",
-        text: "Instagram",
-      },
-      { href: "https://www.facebook.com/studentfestivalen", text: "Facebook" },
-      { href: "https://www.tiktok.com/@studentersamfund", text: "TikTok" },
-    ],
     program: {
       today: "What's happening today?",
+      program_more: "For events after Studio click here",
     },
     vors: {
       text: "Play the song to get in the mood before you arrive🔥",
