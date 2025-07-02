@@ -1,17 +1,20 @@
 ---
-const videoUrl = "https://www.youtube.com/watch?v=t7T4RPBpTVY";
-import { translations } from '../data/i18n.js';
+import { translations } from '@data/i18n.js';
 const { lang = 'no' } = Astro.props;
 const t = translations[lang].vors;
+
+const videoUrl = "https://www.youtube.com/watch?v=t7T4RPBpTVY";
 ---
 
-<div style="width: 560px; height: 315px;">
-    <div class="mt-4 text-xl mb-2">
+<div class="self-center flex flex-col items-center p-4 gap-4">
+    <p>
         {t.text}
-    </div>
+    </p>
     <iframe 
-        width="560" 
-        height="315" 
+        loading="lazy"
+        class="max-w-full"
+        width="640"
+        height="480" 
         src={videoUrl.replace("watch?v=", "embed/")} 
         title="YouTube video player" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

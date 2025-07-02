@@ -1,10 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.google.com/specimen/Montserrat?query=montserrat");
+
 @import "tailwindcss";
 
 :root {
-  --font-avenir: "Avenir Next", sans-serif;
-  --background: #E5E2D7;
-  --text: #333333;
-  --accent: #C13131;
+  --font-avenir: "montserrat", sans-serif;
+  --accent: #c13131;
+
+  --dyp-tegl: #720328;
+  --griserosa: #cd96ab;
+  --betongraa: #e5e2d7;
+  --gyllen-oransje: #ff6915;
+  --gyllen-beige: #f8bc90;
+  --slottsblaa: #0a0f6d;
+  --svart: #161516;
 }
 
 @theme {
@@ -12,32 +21,52 @@
   --color-background: var(--background);
   --color-text: var(--text);
   --color-accent: var(--accent);
+
+  --color-dyp-tegl: var(--dyp-tegl);
+  --color-griserosa: var(--griserosa);
+  --color-betongraa: var(--betongraa);
+  --color-gyllen-oransje: var(--gyllen-oransje);
+  --color-gyllen-beige: var(--gyllen-beige);
+  --color-slottsblaa: var(--slottsblaa);
+  --color-svart: var(--svart);
 }
 
 html,
 body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+  @apply m-0;
+  @apply w-full;
+  @apply h-full;
 }
 
 body {
-    @apply text-lg;
-    font-family: var(--font-avenir);
-    color: var(--color-text);
-    background-color: var(--color-background);
+  @apply bg-betongraa;
+  font-family: var(--font-avenir);
+  @apply text-svart;
+  @apply text-lg;
+  @apply leading-relaxed;
 }
 
-a {
-    color: var(--color-accent);
-    text-decoration: none;
+a.active {
+  font-weight: bolder;
 }
 
-nav a {
-    display: inline-block;
-    text-decoration: none;
-  }
- nav a.active {
-    font-weight: bolder;
-    text-decoration: underline;
-  }
+#content a {
+  @apply text-gyllen-oransje;
+}
+#content a:hover {
+  @apply text-slottsblaa;
+  @apply underline;
+}
+
+#program-list:nth-child(odd) a {
+  @apply text-accent;
+}
+#program-list:nth-child(odd) a:hover {
+  @apply text-dyp-tegl;
+  @apply underline;
+}
+
+#program-list:nth-child(even) a:hover {
+  @apply text-accent;
+  @apply underline;
+}

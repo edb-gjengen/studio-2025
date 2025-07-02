@@ -14,9 +14,9 @@ const { lang = 'no' } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>STUDiO 2025 - Studentfestivalen i Oslo</title>
 	</head>
-	<body class="grid grid-rows-[auto_1fr_auto] jusify-center">
+	<body class="grid grid-rows-[auto_1fr_auto] jusify-center gap-12">
 		<Nav lang={lang} />
-		<div class="max-w-7xl grid place-self-center gap-8">
+		<div id="content" class="max-w-7xl grid place-self-center gap-8 px-4">
 			<slot />
 		</div>
 		<Footer lang={lang} />

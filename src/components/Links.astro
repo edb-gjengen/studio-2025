@@ -1,11 +1,17 @@
 ---
-import { translations } from '../data/i18n.js';
-const { lang = 'no' } = Astro.props;
-const links = translations[lang].links;
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
+const { href, class: className, ...props } = Astro.props;
+
 ---
 
-<div class="flex gap-4 justify-center items-center">
-    {links.map(link => (
-        <a href={link.href} target="_blank" rel="noopener noreferrer">{link.text}</a>
-    ))}
+<div class:list={["flex gap-6 justify-center items-center", className]} {...props}>
+    <a href="https://www.facebook.com/events/692300293586085" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <FaFacebook className=`${className} hover:text-slottsblaa` />
+    </a>
+    <a href="https://www.instagram.com/studentfestivalenioslo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-griserosa">
+        <FaInstagram className=`${className} hover:text-slottsblaa` />
+    </a>
+    <a href="https://www.tiktok.com/@studentersamfund" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="hover:text-dyp-tegl">
+        <FaTiktok className=`${className} hover:text-slottsblaa` />
+    </a>
 </div>

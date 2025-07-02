@@ -1,15 +1,19 @@
 ---
-import { translations } from '../data/i18n.js';
+import { translations } from '@data/i18n.js';
+import { Image } from 'astro:assets';
+import benker from '@assets/studioBenker.png';
 const { lang = 'no' } = Astro.props;
 const t = translations[lang].about;
 ---
 
-<main class="flex gap-8 flex-col">
+<main class="flex gap-8 flex-col max-w-prose">
   <h1 class="text-4xl font-bold">{t.title}</h1>
-  <div class="flex gap-2 text-lg max-w-prose flex-col">
+  <div class="flex gap-2 text-lg flex-col">
     <p>{t.p1}</p>
     <p>{t.p2}</p>
     <p>{t.p3}</p>
     <p>{t.p4}</p>
+    <Image src={benker} alt="Studio Benker" class="place-self-center w-full" width={600} height={400} loading="eager" /> 
+    <p set:html={t.p5}></p>
   </div>
 </main>

@@ -1,0 +1,18 @@
+---
+const { href, class: className, noActive = false, ...props } = Astro.props;
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+const subpath = pathname.match(/[^\/]+/g);
+
+const normalize = (str: string) => str.replace(/^\/+/, "");
+const isActive = !noActive && (
+  normalize(href) === normalize(pathname) ||
+  normalize(href) === `en/${normalize(pathname)}` ||
+  normalize(href) === (subpath?.[0] || "") ||
+  (normalize(href) === "en" && normalize(pathname) === "en") ||
+  (normalize(href) === "" && normalize(pathname) === "")
+);
+---
+
+<a href={href} class:list={["hover:text-white border-b-4 border-b-transparent hover:border-b-slottsblaa no-underline p-2 flex items-center text-center", className, { active: isActive }]} {...props}>
+  <slot />
+</a>
