@@ -35,10 +35,10 @@ export const translations = {
     },
     program: {
       today: "Hva skjer i dag?",
-      program_more: "For arrangementer etter Studio trykk her",
+      programMore: "For arrangementer etter Studio trykk her",
     },
     vors: {
-      text: "Sett på låta for litt stemning før dere kommer🔥",
+      text: "Sett på låta for litt stemning før dere kommer 🔥",
     },
     footer: {
       address: "Slemdalsveien 15, 0369 Oslo",
@@ -56,16 +56,16 @@ export const translations = {
       title: "STUDiO 2025",
     },
     hero: {
-      title: "Student Festival in Oslo 2025",
-      alt: "Student Festival in Oslo Logo",
+      title: "The Student Festival in Oslo 2025",
+      alt: "The Student Festival in Oslo Logo",
     },
     faq: {
       title: "Frequently Asked Questions",
-      q1: "Where is the festival held?",
+      q1: "Where is the festival being held?",
       a1: 'At <a href="https://neuf.no/praktisk#adkomst">Chateau Neuf</a>, Majorstuen, Oslo',
       q2: "Who is the festival for?",
       a2: "All new and returning students, but the events are open to everyone who wants to join.",
-      q3: "Does it cost money to participate?",
+      q3: "Does it cost money?",
       a3: "Free entry every day and almost all events are free. Only 2 events require a ticket.",
       q4: "Do I need a student ID to enter?",
       a4: "No, but general identification is required.",
@@ -82,10 +82,10 @@ export const translations = {
     },
     program: {
       today: "What's happening today?",
-      program_more: "For events after Studio click here",
+      programMore: "For events after Studio click here",
     },
     vors: {
-      text: "Play the song to get in the mood before you arrive🔥",
+      text: "Play the song to get in the mood before you arrive 🔥",
     },
     footer: {
       address: "Slemdalsveien 15, 0369 Oslo",
