@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import logo from '@assets/logo.png';
 import DNS  from '@assets/DNS-logo-hvit.png';
 import { translations } from '@data/i18n.js';
-import Links from './Links.astro';
+import Links from '@components/Links.astro';
 const { lang = 'no' } = Astro.props;
 const t = translations[lang].footer;
 ---
