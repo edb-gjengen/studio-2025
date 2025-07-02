@@ -2,10 +2,11 @@
 import "@styles/global.css";
 import Nav from '@components/Nav.astro';
 import Footer from '@components/Footer.astro';
+const { lang = 'no' } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="no">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -14,10 +15,10 @@ import Footer from '@components/Footer.astro';
 		<title>STUDiO 2025 - Studentfestivalen i Oslo</title>
 	</head>
 	<body class="grid grid-rows-[auto_1fr_auto] jusify-center">
-		<Nav />
+		<Nav lang={lang} />
 		<div class="max-w-7xl grid place-self-center gap-8">
 			<slot />
 		</div>
-		<Footer />
+		<Footer lang={lang} />
 	</body>
 </html>

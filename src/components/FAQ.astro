@@ -1,25 +1,31 @@
+---
+import { translations } from '../data/i18n.js';
+const { lang = 'no' } = Astro.props;
+const t = translations[lang].faq;
+---
+
 <section class="flex flex-col gap-4">
-    <h2 class="text-xl font-bold">Ofte stilte spørsmål</h2>
+    <h2 class="text-xl font-bold">{t.title}</h2>
     <ul class="flex flex-col gap-2">
         <li>
-            <strong>Hvor arrangeres festivalen? </strong>
-            <p>På <a href="https://neuf.no/praktisk#adkomst">Chateau Neuf</a>, Majorstuen, Oslo</p>
+            <strong>{t.q1} </strong>
+            <p set:html={t.a1}></p>
         </li>
         <li>
-            <strong>Hvem er festivalen for?</strong>
-            <p>Alle nye og gamle studenter, men arrangementene er åpne for alle som ønsker å delta.</p>
+            <strong>{t.q2}</strong>
+            <p>{t.a2}</p>
         </li>
         <li>
-            <strong>Koster det penger å delta?</strong>
-            <p>Gratis inngang hver dag og nesten alle arrangementene er gratis. Kun 2 arrangementer krever kjøp av billett.</p>
+            <strong>{t.q3}</strong>
+            <p>{t.a3}</p>
         </li>
         <li>
-            <strong>Må jeg har med student ID for å komme inn?</strong>
-            <p>Nei, men generell legitimasjon er påkrevd.</p>
+            <strong>{t.q4}</strong>
+            <p>{t.a4}</p>
         </li>
         <li>
-            <strong>Hva er alder årsgrensen på festivalen?</strong>
-            <p>Alt er ID18+</p>
+            <strong>{t.q5}</strong>
+            <p>{t.a5}</p>
         </li>
     </ul>
 </section>

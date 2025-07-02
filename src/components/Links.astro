@@ -1,11 +1,7 @@
 ---
-const links = [
-    { href: "https://www.neuf.no", text: "Chateau Neuf" },
-    { href: "https://forms.gle/PvEh37nvRyicLFXn6", text: "Bli frivillig!" },
-    { href: "https://www.instagram.com/studentfestivalenioslo/", text: "Instagram" },
-    { href: "https://www.facebook.com/studentfestivalen", text: "Facebook" },
-    { href: "https://www.tiktok.com/@studentersamfund", text: "TikTok" },
-];
+import { translations } from '../data/i18n.js';
+const { lang = 'no' } = Astro.props;
+const links = translations[lang].links;
 ---
 
 <div class="flex gap-4 justify-center items-center">

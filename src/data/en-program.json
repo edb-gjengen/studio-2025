@@ -1,30 +1,40 @@
 {
-    "Monday 11th": [
-        { "time": "18:00", "event": "Opening party with DJ", "cost": "free" },
-        { "time": "21:00", "event": "Sing-a-long karaoke", "cost": "free" },
-        { "time": "22:00", "event": "Silent Disco", "cost": "free" }
-    ],
-    "Tuesday 12th": [
-        { "time": "18:00", "event": "Barbecue", "cost": "free" },
-        { "time": "19:00", "event": "Qualified Guessing Quiz", "cost": "free" },
-        { "time": "21:00", "event": "Live Karaoke", "cost": "free" },
-        { "time": "22:00", "event": "Silent Disco", "cost": "free" }
-    ],
-    "Wednesday 13th": [
-        { "time": "18:00", "event": "KKK: Comic Comedian Evening", "cost": "tickets out!" },
-        { "time": "18:00", "event": "Hits for Quiz", "cost": "free" },
-        { "time": "21:00", "event": "Karaoke", "cost": "free" },
-        { "time": "22:00", "event": "Silent Disco", "cost": "free" }
-    ],
-    "Thursday 14th": [
-        { "time": "18:00", "event": "Drunk Impro 4K, VRØVL", "cost": "tickets out!" },
-        { "time": "19:00", "event": "Shrek 2 Screening", "cost": "free" },
-        { "time": "20:00", "event": "Live Karaoke", "cost": "free" },
-        { "time": "22:00", "event": "Silent Disco", "cost": "free" }
-    ],
-    "Friday 15th": [
-        { "time": "21:00", "event": "Sing-a-long karaoke", "cost": "free" },
-        { "time": "22:00", "event": "Afterparty", "cost": "free" },
-        { "time": "22:00", "event": "Silent Disco", "cost": "free" }
-    ]
+  "Monday 11th": [
+    { "time": "18:00", "event": "Opening party with DJ", "cost": "free" },
+    { "time": "21:00", "event": "Sing-a-long karaoke", "cost": "free" },
+    { "time": "22:00", "event": "Silent Disco", "cost": "free" }
+  ],
+  "Tuesday 12th": [
+    { "time": "18:00", "event": "Barbecue", "cost": "free" },
+    { "time": "19:00", "event": "Qualified Guessing Quiz", "cost": "free" },
+    { "time": "21:00", "event": "Live Karaoke", "cost": "free" },
+    { "time": "22:00", "event": "Silent Disco", "cost": "free" }
+  ],
+  "Wednesday 13th": [
+    {
+      "time": "18:00",
+      "event": "KKK: Comic Comedian Evening",
+      "cost": "tickets out!",
+      "url": "https://www.ticketmaster.no/event/studio-komisk-komedie-kveld-billetter/920472981"
+    },
+    { "time": "18:00", "event": "Hits for Quiz", "cost": "free" },
+    { "time": "21:00", "event": "Karaoke", "cost": "free" },
+    { "time": "22:00", "event": "Silent Disco", "cost": "free" }
+  ],
+  "Thursday 14th": [
+    {
+      "time": "18:00",
+      "event": "Drunk Impro 4K, VRØVL",
+      "cost": "tickets out!",
+      "url": "https://www.ticketmaster.no/event/studio-drunk-impro-i-storsalen-med-4k-billetter/912660512"
+    },
+    { "time": "19:00", "event": "Shrek 2 Screening", "cost": "free" },
+    { "time": "20:00", "event": "Live Karaoke", "cost": "free" },
+    { "time": "22:00", "event": "Silent Disco", "cost": "free" }
+  ],
+  "Friday 15th": [
+    { "time": "21:00", "event": "Sing-a-long karaoke", "cost": "free" },
+    { "time": "22:00", "event": "Afterparty", "cost": "free" },
+    { "time": "22:00", "event": "Silent Disco", "cost": "free" }
+  ]
 }

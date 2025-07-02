@@ -1,25 +1,11 @@
 ---
-import data from '/src/data/program.json';
 import Layout from '@layouts/Layout.astro';
+import Program from '@components/Program.astro';
+import data from '../data/program.json';
 ---
 
-<Layout>
-        {Object.entries(data).map(([dayName, items], index) => (
-            <div class="day">
-                <h2>{dayName}</h2>
-                <ul>
-                    {items.map((item, itemIndex) => (
-                        <li class="item">
-                            {item.time} - {item.event} - {item.url ? (
-                                <a href={item.url} target="_blank" rel="noopener noreferrer">{item.price}</a>
-                            ) : (
-                                item.price
-                            )}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        ))}
+<Layout lang="no">
+  <Program lang="no" data={data} />
 </Layout>
 
 <style>

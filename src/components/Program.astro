@@ -1,65 +1,59 @@
 ---
-const currentDate = new Date().toLocaleDateString("nb-NO", {
+import { translations } from '../data/i18n.js';
+const { lang = 'no', data } = Astro.props;
+const t = translations[lang].program;
+const currentDate = new Date().toLocaleDateString(lang === 'en' ? 'en-GB' : 'nb-NO', {
   weekday: 'long',
   year: 'numeric',
   month: 'long',
   day: 'numeric'
 });
-
-const events = [
-  {
-    id: "9882",
-    slug: "magic-the-gathering-monday",
-    title: "Magic: The Gathering Monday",
-    subtitle: "",
-    nextOccurrence: {
-      id: "9326",
-      start: "2025-06-16 15:00:00+00:00",
-      end: null,
-      venue: {
-        id: "52",
-        slug: "galleriet",
-        title: "Galleriet",
-        preposition: "i",
-        url: "/lokaler/galleriet/",
-      },
-      venueCustom: "",
-    },
-    url: "https://neuf.no/arrangementer/magic-the-gathering-monday",
-    futureOccurrencesCount: 2,
-  },
-  // ...other events
-];
-
-function formatDate(dateString) {
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-  return new Date(dateString).toLocaleDateString('no-NO', options);
-}
-
-// Filter events for Monday
-const mondayEvents = events.filter(event => {
-  const eventDate = new Date(event.nextOccurrence.start);
-  return eventDate.getDay() === 1; // Monday is represented by 1
-});
 ---
-
-<div class="flex gap-4 flex-col">
-  <div class="flex items-center justify-between">
-    <h2 class="font-bold text-xl">Hva skjer i dag?</h2>
-    <p>{currentDate}</p>
-  </div>
-  <ul>
-    {events.map(event => (
-      <li key={event.id}>
-        <a href={event.url}>
-          <h2>{event.title}</h2>
-          {event.subtitle && <p>{event.subtitle}</p>}
-          <p>
-            {event.nextOccurrence.start && formatDate(event.nextOccurrence.start)}{" "}
-            {event.nextOccurrence.venueCustom || `${event.nextOccurrence.venue.preposition} ${event.nextOccurrence.venue.title}`}
-          </p>
-        </a>
-      </li>
+{data ? (
+  <div class="flex gap-4 flex-col">
+    <div class="flex items-center justify-between">
+      <h2 class="font-bold text-xl">{t.today}</h2>
+      <p>{currentDate}</p>
+    </div>
+    {Object.entries(data).map(([dayName, items]) => (
+      <div class="day">
+        <h2>{dayName}</h2>
+        <ul>
+          {items.map((item) => {
+            const price = item.price || item.cost;
+            return (
+              <li class="item">
+                {item.time} - {item.event} - {item.url ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">{price}</a>
+                ) : (
+                  price
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     ))}
-  </ul>
-</div>
+  </div>
+) : (
+  <div>No program data available.</div>
+)}
+
+<style>
+.day {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.day:nth-child(odd) {
+  background-color: #F8BC90;
+}
+.day:nth-child(even) {
+  background-color: #0A0F6D;
+  color: #fff;
+}
+.item {
+  margin: 5px 0;
+}
+</style>
