@@ -1,16 +1,16 @@
 {
-  "Monday 11th": [
+  "2025-08-11": [
     { "time": "18:00", "event": "Opening party with DJ", "cost": "free" },
     { "time": "21:00", "event": "Sing-a-long karaoke", "cost": "free" },
     { "time": "22:00", "event": "Silent Disco", "cost": "free" }
   ],
-  "Tuesday 12th": [
+  "2025-08-12": [
     { "time": "18:00", "event": "Barbecue", "cost": "free" },
     { "time": "19:00", "event": "Qualified Guessing Quiz", "cost": "free" },
     { "time": "21:00", "event": "Live Karaoke", "cost": "free" },
     { "time": "22:00", "event": "Silent Disco", "cost": "free" }
   ],
-  "Wednesday 13th": [
+  "2025-08-13": [
     {
       "time": "18:00",
       "event": "KKK: Comic Comedian Evening",
@@ -21,7 +21,7 @@
     { "time": "21:00", "event": "Karaoke", "cost": "free" },
     { "time": "22:00", "event": "Silent Disco", "cost": "free" }
   ],
-  "Thursday 14th": [
+  "2025-08-14": [
     {
       "time": "18:00",
       "event": "Drunk Impro 4K, VRØVL",
@@ -32,7 +32,7 @@
     { "time": "20:00", "event": "Live Karaoke", "cost": "free" },
     { "time": "22:00", "event": "Silent Disco", "cost": "free" }
   ],
-  "Friday 15th": [
+  "2025-08-15": [
     { "time": "21:00", "event": "Sing-a-long karaoke", "cost": "free" },
     { "time": "22:00", "event": "Afterparty", "cost": "free" },
     { "time": "22:00", "event": "Silent Disco", "cost": "free" }
