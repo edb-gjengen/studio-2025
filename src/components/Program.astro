@@ -1,9 +1,17 @@
 ---
-import { translations } from '@data/i18n.js';
-const { lang = 'no', data } = Astro.props;
+import { translations, type Lang } from '@data/i18n';
+const { lang = 'no', data } = Astro.props as { lang?: Lang, data: any };
 const t = translations[lang].program;
 
-const convertDate = (date) => {
+type ProgramItem = {
+  time: string;
+  event: string;
+  price?: string | null;
+  cost?: string | null;
+  url?: string;
+};
+
+const convertDate = (date: string | Date) => {
   let d = date;
   if (!(d instanceof Date)) {
     d = new Date(d);
@@ -26,7 +34,7 @@ const convertDate = (date) => {
       <div id="program-list" class="w-125 p-6 border-1 border-white rounded-2xl even:bg-slottsblaa even:text-white bg-gyllen-beige flex flex-col gap-2">
         <h2 class="font-bold text-xl">{convertDate(date)}</h2>
         <ul>
-          {items.map((item) => {
+          {(items as ProgramItem[]).map((item) => {
             const price = item.price || item.cost;
             return (
               <li class="flex justify-between">

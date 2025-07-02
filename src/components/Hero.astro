@@ -1,8 +1,8 @@
 ---
 import logo from '@assets/logo.png';
 import { Image } from 'astro:assets';
-import { translations } from '@data/i18n.js';
-const { lang = 'no' } = Astro.props;
+import { translations, type Lang } from '@data/i18n';
+const { lang = 'no' } = Astro.props as { lang?: Lang };
 const t = translations[lang].hero;
 ---
 

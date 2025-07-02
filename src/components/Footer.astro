@@ -2,9 +2,9 @@
 import { Image } from 'astro:assets';
 import logo from '@assets/logo.png';
 import DNS  from '@assets/DNS-logo-hvit.png';
-import { translations } from '@data/i18n.js';
+import { translations, type Lang } from '@data/i18n';
 import Links from '@components/Links.astro';
-const { lang = 'no' } = Astro.props;
+const { lang = 'no' } = Astro.props as { lang?: Lang };
 const t = translations[lang].footer;
 ---
 

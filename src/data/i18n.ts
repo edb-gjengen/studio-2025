@@ -93,4 +93,6 @@ export const translations = {
       dnsAlt: "Logo for the Norwegian Student Society",
     },
   },
-};
+} as const;
+
+export type Lang = keyof typeof translations;

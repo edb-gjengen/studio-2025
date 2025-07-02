@@ -1,8 +1,8 @@
 ---
-import { translations } from '@data/i18n.js';
+import { translations, type Lang } from '@data/i18n';
 import { Image } from 'astro:assets';
 import benker from '@assets/studioBenker.png';
-const { lang = 'no' } = Astro.props;
+const { lang = 'no' } = Astro.props as { lang?: Lang };
 const t = translations[lang].about;
 ---
 
