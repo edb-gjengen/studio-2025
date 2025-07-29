@@ -11,7 +11,7 @@ const t = translations[lang].footer;
 <footer class="flex items-center lg:justify-between justify-center bg-accent text-white py-16 px-18 mt-20">
     <div class="gap-4 items-center justify-center hidden lg:flex">
         <Image src={logo} alt={t.org} class="hero-logo" width={64} height={64} loading="lazy" />
-        <p class="text-white text-2xl">{t.org}</p>
+        <p class="text-white text-2xl" set:html={t.org}></p>
     </div>
     <div class="flex gap-6 items-center justify-center flex-col text-center">
         <Image src={DNS} alt={t.dnsAlt} class="hero-logo" width={200} height={200} loading="lazy" />

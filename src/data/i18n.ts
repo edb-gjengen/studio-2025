@@ -42,7 +42,7 @@ export const translations = {
     },
     footer: {
       address: "Slemdalsveien 15, 0369 Oslo",
-      org: "Studentfestivalen i Oslo 2025",
+      org: "Studentfestivalen<br>i Oslo 2025",
       dnsAlt: "Logo for Det Norske Studentersamfund",
     },
   },
@@ -89,7 +89,7 @@ export const translations = {
     },
     footer: {
       address: "Slemdalsveien 15, 0369 Oslo",
-      org: "Student Festival in Oslo 2025",
+      org: "Student Festival<br>in Oslo 2025",
       dnsAlt: "Logo for the Norwegian Student Society",
     },
   },
