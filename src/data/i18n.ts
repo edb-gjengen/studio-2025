@@ -36,6 +36,7 @@ export const translations = {
     program: {
       today: "Hva skjer i dag?",
       programMore: "For arrangementer etter Studio trykk her",
+      noProgram: "Ingenting på programmet i dag :(",
     },
     vors: {
       text: "Sett på låta for litt stemning før dere kommer 🔥",
@@ -83,6 +84,7 @@ export const translations = {
     program: {
       today: "What's happening today?",
       programMore: "For events after Studio click here",
+      noProgram: "No events today :(",
     },
     vors: {
       text: "Play the song to get in the mood before you arrive 🔥",

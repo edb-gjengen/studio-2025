@@ -1,15 +1,9 @@
 ---
 import { translations, type Lang } from '@data/i18n';
+import ProgramCard from './ProgramCard.astro';
+
 const { lang = 'no', data } = Astro.props as { lang?: Lang, data: any };
 const t = translations[lang].program;
-
-type ProgramItem = {
-  time: string;
-  event: string;
-  price?: string | null;
-  cost?: string | null;
-  url?: string;
-};
 
 const convertDate = (date: string | Date) => {
   let d = date;
@@ -30,27 +24,8 @@ const convertDate = (date: string | Date) => {
     <p class="font-bold text-2xl text-center w-full">{convertDate(new Date())}</p>
   </div>
   <div class="flex gap-12 flex-wrap justify-center items-stretch">
-    {Object.entries(data).map(([date, items]) => (
-      <div id="program-list" class="w-125 p-6 rounded-2xl even:bg-slottsblaa even:text-white bg-gyllen-beige flex flex-col gap-2">
-        <h2 class="font-bold text-xl">{convertDate(date)}</h2>
-        <ul>
-          {(items as ProgramItem[]).map((item) => {
-            const price = item.price || item.cost;
-            return (
-              <li class="flex justify-between">
-                <p>
-                {item.time} - {item.event}
-                </p>
-                {item.url ? (
-                  <a href={item.url} target="_blank" rel="noopener noreferrer" class="text-right">{price}</a>
-                ) : (
-                  price
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+    {Object.entries(data).map(([date, items], idx) => (
+      <ProgramCard date={date} items={items} lang={lang} even={idx % 2 === 1} />
     ))}
   </div>
   <div class="flex justify-center">
@@ -59,9 +34,5 @@ const convertDate = (date: string | Date) => {
     </p>
   </div>
 ) : (
-  <div>No program data available.</div>
+  <div>{t.noProgram}</div>
 )}
-
-<style>
-
-</style>

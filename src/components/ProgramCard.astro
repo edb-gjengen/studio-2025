@@ -1,0 +1,46 @@
+---
+import { translations, type Lang } from '@data/i18n';
+const { date, items, lang = 'no', even = false } = Astro.props as { date: string | Date, items: ProgramItem[], lang?: Lang, even?: boolean };
+const t = translations[lang].program;
+
+type ProgramItem = {
+  time: string;
+  event: string;
+  price?: string | null;
+  cost?: string | null;
+  url?: string;
+};
+
+const convertDate = (date: string | Date) => {
+  let d = date;
+  if (!(d instanceof Date)) {
+    d = new Date(d);
+  }
+  return d.toLocaleDateString(lang === 'en' ? 'en-GB' : 'nb-NO', {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+---
+
+<div id="program-list" class:list={["w-125 p-6 rounded-2xl flex flex-col gap-2", even ? "bg-slottsblaa text-white" : "bg-gyllen-beige"]}>
+  <h3 class="font-bold text-xl">{convertDate(date)}</h3>
+  <ul>
+    {items.map((item) => {
+      const price = item.price || item.cost;
+      return (
+        <li class="flex justify-between">
+          <p>
+            {item.time} - {item.event}
+          </p>
+          {item.url ? (
+            <a href={item.url} target="_blank" rel="noopener noreferrer" class="text-right">{price}</a>
+          ) : (
+            price
+          )}
+        </li>
+      );
+    })}
+  </ul>
+</div> 
