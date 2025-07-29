@@ -3,28 +3,15 @@ import { translations, type Lang } from '@data/i18n';
 import ProgramCard from './ProgramCard.astro';
 
 const { lang = 'no', data } = Astro.props as { lang?: Lang, data: any };
-const t = translations[lang].program;
+const t = translations[lang];
 
 const today = new Date();
 today.setHours(0, 0, 0, 0);
-
-const convertDate = (date: string | Date) => {
-  let d = date;
-  if (!(d instanceof Date)) {
-    d = new Date(d);
-  }
-  return d.toLocaleDateString(lang === 'en' ? 'en-GB' : 'nb-NO', {
-    weekday: 'long',
-    month: 'long',
-    day: 'numeric'
-  });
-};
 ---
 
 {data ? (
   <div class="flex items-center justify-between flex-col gap-8">
-    <h1 class="font-bold text-3xl text-center w-full">{t.today}</h1>
-    <p class="font-bold text-2xl text-center w-full">{convertDate(new Date())}</p>
+    <h1 class="font-bold text-3xl text-center w-full">{t.nav.program}</h1>
   </div>
   <div class="flex gap-12 flex-wrap justify-center items-stretch">
     {Object.entries(data).map(([date, items], idx) => (
@@ -39,9 +26,9 @@ const convertDate = (date: string | Date) => {
   </div>
   <div class="flex justify-center">
     <p class="font-bold text-xl text-center w-full">
-      <a href="https://neuf.no/arrangementer" class="text-gyllen-oransje hover:text-slottsblaa hover:underline" target="_blank" rel="noopener noreferrer">{t.programMore}</a>
+      <a href="https://neuf.no/arrangementer" class="text-gyllen-oransje hover:text-slottsblaa hover:underline" target="_blank" rel="noopener noreferrer">{t.program.programMore}</a>
     </p>
   </div>
 ) : (
-  <div>{t.noProgram}</div>
+  <div>{t.program.noProgram}</div>
 )}
