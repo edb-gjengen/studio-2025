@@ -22,7 +22,9 @@ const t = translations[lang].footer;
         </div>
     </div>
     <div class="flex gap-6 items-center justify-center flex-col text-center">
-        <Image src={DNS} alt={t.dnsAlt} class="hero-logo" width={200} height={200} loading="lazy" />
+        <a href="https://neuf.no" target="_blank">
+            <Image src={DNS} alt={t.dnsAlt} class="hero-logo" width={200} height={200} loading="lazy" />
+        </a>
         <address>{t.address}</address>
         <Links lang={lang} class="text-3xl" />
     </div>
