@@ -31,11 +31,11 @@ export const translations = {
       p2: "Det blir sosiale og spennende arrangementer hver dag! Festivalen er for alle nye og gamle studenter i Oslo. Opplev høydepunktet i semesteret - ta med fadderbarna eller vennegjengen, eller kom alene og møt nye venner.",
       p3: "Ikke gå glipp av den største studiekickoffen i Oslo!",
       p4: "Flere av arrangementene våre er gratis, og alt er ID 18+.",
-      p5: 'Dersom du ønsker å lære mer om historien til Studio, samt Det Norske Studentersamfund kan du leser mer på <a href="https://viteboka.studentersamfundet.no/Studentfestivalen_i_Oslo">Viteboka</a>',
+      p5: 'Dersom du ønsker å lære mer om historien til STUDiO, samt Det Norske Studentersamfund kan du leser mer på <a href="https://viteboka.studentersamfundet.no/Studentfestivalen_i_Oslo">Viteboka</a>',
     },
     program: {
       today: "Hva skjer i dag?",
-      programMore: "For arrangementer etter Studio trykk her",
+      programMore: "For arrangementer etter STUDiO trykk her",
       noProgram: "Ingenting på programmet i dag :(",
     },
     vors: {
@@ -80,11 +80,11 @@ export const translations = {
       p2: "There will be social and exciting events every day for new and old students. Bring your buddies, a group of friends or come alone and experience the highlight of the semester.",
       p3: "Don't miss the biggest buddy and semester kickoff in Oslo!",
       p4: "Several of our events are free and everything is ID18+.",
-      p5: 'If you want to learn more about the history of Studio, as well as The Norwegian Student Society, you can read more on <a href="https://viteboka.studentersamfundet.no/Studentfestivalen_i_Oslo">Viteboka</a>',
+      p5: 'If you want to learn more about the history of STUDiO, as well as The Norwegian Student Society, you can read more on <a href="https://viteboka.studentersamfundet.no/Studentfestivalen_i_Oslo">Viteboka</a>',
     },
     program: {
       today: "What's happening today?",
-      programMore: "For events after Studio click here",
+      programMore: "For events after STUDiO click here",
       noProgram: "No events today :(",
     },
     vors: {
