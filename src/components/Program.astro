@@ -31,7 +31,7 @@ const convertDate = (date: string | Date) => {
   </div>
   <div class="flex gap-12 flex-wrap justify-center items-stretch">
     {Object.entries(data).map(([date, items]) => (
-      <div id="program-list" class="w-125 p-6 border-1 border-white rounded-2xl even:bg-slottsblaa even:text-white bg-gyllen-beige flex flex-col gap-2">
+      <div id="program-list" class="w-125 p-6 rounded-2xl even:bg-slottsblaa even:text-white bg-gyllen-beige flex flex-col gap-2">
         <h2 class="font-bold text-xl">{convertDate(date)}</h2>
         <ul>
           {(items as ProgramItem[]).map((item) => {
