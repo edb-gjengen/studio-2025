@@ -1,6 +1,6 @@
 ---
 import { translations, type Lang } from '@data/i18n';
-const { date, items, lang = 'no', even = false } = Astro.props as { date: string | Date, items: ProgramItem[], lang?: Lang, even?: boolean };
+const { date, items, lang = 'no', even = false, isPast = false } = Astro.props as { date: string | Date, items: ProgramItem[], lang?: Lang, even?: boolean, isPast?: boolean };
 const t = translations[lang].program;
 
 type ProgramItem = {
@@ -24,7 +24,7 @@ const convertDate = (date: string | Date) => {
 };
 ---
 
-<div id="program-list" class:list={["w-125 p-6 rounded-2xl flex flex-col gap-2", even ? "bg-slottsblaa text-white" : "bg-gyllen-beige"]}>
+<div id="program-list" class:list={["w-125 p-6 rounded-2xl flex flex-col gap-2", even ? "bg-slottsblaa text-white" : "bg-gyllen-beige", isPast ? "opacity-50" : ""]}>
   <h3 class="font-bold text-xl">{convertDate(date)}</h3>
   <ul>
     {items.map((item) => {

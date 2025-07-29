@@ -5,6 +5,9 @@ import ProgramCard from './ProgramCard.astro';
 const { lang = 'no', data } = Astro.props as { lang?: Lang, data: any };
 const t = translations[lang].program;
 
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
 const convertDate = (date: string | Date) => {
   let d = date;
   if (!(d instanceof Date)) {
@@ -25,7 +28,13 @@ const convertDate = (date: string | Date) => {
   </div>
   <div class="flex gap-12 flex-wrap justify-center items-stretch">
     {Object.entries(data).map(([date, items], idx) => (
-      <ProgramCard date={date} items={items} lang={lang} even={idx % 2 === 1} />
+      <ProgramCard
+        date={date}
+        items={items}
+        lang={lang}
+        even={idx % 2 === 1}
+        isPast={new Date(date) < today}
+      />
     ))}
   </div>
   <div class="flex justify-center">
