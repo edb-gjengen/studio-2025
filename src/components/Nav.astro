@@ -19,7 +19,7 @@ function getLangSwitchPath(path: string, lang: string) {
 
 const langSwitchPath = getLangSwitchPath(pathname, lang);
 ---
-<nav class="flex justify-center lg:justify-between items-center px-10 py-6 bg-accent mb-4 whitespace-nowrap">
+<nav class="flex justify-center lg:justify-between items-center px-10 py-3 bg-accent mb-4 whitespace-nowrap">
     <h1 class="text-xl font-bold text-white hover:no-underline hidden lg:block">
         <a href={lang === 'en' ? '/en/' : '/'} class="hover:no-underline">{t.title}</a>
     </h1>
