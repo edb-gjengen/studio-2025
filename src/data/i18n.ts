@@ -74,10 +74,10 @@ export const translations = {
     },
     about: {
       title: "About STUDiO 2025",
-      p1: "STUDiO 2025 is a student festival held during the buddy week in Oslo from August 11th to 15th at Chateau Neuf.",
-      p2: "There will be social and exciting events every day! The festival is for all new and returning students in Oslo. Experience the highlight of the semester - bring your buddy group or friends, or come alone and meet new people.",
-      p3: "Don't miss the biggest student kickoff in Oslo!",
-      p4: "Many of our events are free, and everything is 18+.",
+      p1: "STUDiO 2025 is a student festival held during the buddy week in Oslo from August 11 to 15 at Chateau Neuf.",
+      p2: "There will be social and exciting events every day for new and old students. Bring your buddies, a group of friends or come alone and experience the highlight of the semester.",
+      p3: "Don't miss the biggest buddy and semester kickoff in Oslo!",
+      p4: "Several of our events are free and everything is ID18+.",
       p5: 'If you want to learn more about the history of Studio, as well as The Norwegian Student Society, you can read more on <a href="https://viteboka.studentersamfundet.no/Studentfestivalen_i_Oslo">Viteboka</a>',
     },
     program: {
