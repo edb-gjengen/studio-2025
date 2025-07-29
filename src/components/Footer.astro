@@ -2,16 +2,24 @@
 import { Image } from 'astro:assets';
 import logo from '@assets/logo.png';
 import DNS  from '@assets/DNS-logo-hvit.png';
+import outland from "@assets/outland.svg"
 import { translations, type Lang } from '@data/i18n';
 import Links from '@components/Links.astro';
+
 const { lang = 'no' } = Astro.props as { lang?: Lang };
 const t = translations[lang].footer;
 ---
 
-<footer class="flex items-center lg:justify-between justify-center bg-accent text-white py-16 px-18 mt-20">
-    <div class="gap-4 items-center justify-center hidden lg:flex">
-        <Image src={logo} alt={t.org} class="hero-logo" width={64} height={64} loading="lazy" />
-        <p class="text-white text-2xl" set:html={t.org}></p>
+<footer class="flex items-center lg:justify-between justify-center bg-accent text-white py-16 px-18 mt-20 gap-18">
+    <div class="gap-6 flex flex-col">
+        <div class="gap-4 items-center justify-center flex">
+            <Image src={logo} alt={t.org} class="hero-logo" width={64} height={64} loading="lazy" />
+            <p class="text-white text-2xl hidden lg:block" set:html={t.org}></p>
+        </div>
+        <div class="gap-4 items-center flex flex-col">
+            <h3>{t.sponsoredBy}</h3>
+            <Image src={outland} alt="Outland" width={120} height={40} loading="lazy" />
+        </div>
     </div>
     <div class="flex gap-6 items-center justify-center flex-col text-center">
         <Image src={DNS} alt={t.dnsAlt} class="hero-logo" width={200} height={200} loading="lazy" />

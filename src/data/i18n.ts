@@ -45,6 +45,7 @@ export const translations = {
       address: "Slemdalsveien 15, 0369 Oslo",
       org: "Studentfestivalen<br>i Oslo 2025",
       dnsAlt: "Logo for Det Norske Studentersamfund",
+      sponsoredBy: "Sponset av",
     },
   },
   en: {
@@ -93,6 +94,7 @@ export const translations = {
       address: "Slemdalsveien 15, 0369 Oslo",
       org: "Student Festival<br>in Oslo 2025",
       dnsAlt: "Logo for the Norwegian Student Society",
+      sponsoredBy: "Sponsored by",
     },
   },
 } as const;
