@@ -22,8 +22,8 @@
       "url": "https://www.ticketmaster.no/event/studio-komisk-komedie-kveld-billetter/920472981"
     },
     { "time": "18:00", "event": "Hits for Quiz", "price": "gratis" },
-    { "time": "21:00", "event": "Karaoke", "price": null },
-    { "time": "22:00", "event": "Silent Disco", "price": null }
+    { "time": "21:00", "event": "Karaoke", "price": "gratis" },
+    { "time": "22:00", "event": "Silent Disco", "price": "gratis" }
   ],
   "2025-08-14": [
     {
