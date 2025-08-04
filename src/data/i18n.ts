@@ -32,6 +32,7 @@ export const translations = {
       p3: "Ikke gå glipp av den største studiekickoffen i Oslo!",
       p4: "Flere av arrangementene våre er gratis, og alt er ID 18+.",
       p5: 'Dersom du ønsker å lære mer om historien til STUDiO, samt Det Norske Studentersamfund kan du leser mer på <a href="https://viteboka.studentersamfundet.no/Studentfestivalen_i_Oslo">Viteboka</a>',
+      photoCredit: "Foto:",
     },
     program: {
       today: "Hva skjer i dag?",
@@ -81,6 +82,7 @@ export const translations = {
       p3: "Don't miss the biggest buddy and semester kickoff in Oslo!",
       p4: "Several of our events are free and everything is ID18+.",
       p5: 'If you want to learn more about the history of STUDiO, as well as The Norwegian Student Society, you can read more on <a href="https://viteboka.studentersamfundet.no/Studentfestivalen_i_Oslo">Viteboka</a>',
+      photoCredit: "Photo:",
     },
     program: {
       today: "What's happening today?",

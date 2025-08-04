@@ -1,8 +1,8 @@
 ---
-import { translations, type Lang } from '@data/i18n';
-import { Image } from 'astro:assets';
-import benker from '@assets/studioBenker.png';
-const { lang = 'no' } = Astro.props as { lang?: Lang };
+import { translations, type Lang } from "@data/i18n";
+import { Image } from "astro:assets";
+import benker from "@assets/studioBenker.png";
+const { lang = "no" } = Astro.props as { lang?: Lang };
 const t = translations[lang].about;
 ---
 
@@ -13,7 +13,19 @@ const t = translations[lang].about;
     <p>{t.p2}</p>
     <p>{t.p3}</p>
     <p>{t.p4}</p>
-    <Image src={benker} alt="Studio Benker" class="place-self-center w-full" width={600} height={400} loading="eager" /> 
-    <p set:html={t.p5}></p>
+    <div>
+      <Image
+        src={benker}
+        alt="Studio Benker"
+        class="place-self-center w-full"
+        width={600}
+        height={400}
+        loading="eager"
+      />
+      <p class="text-right text-md font-light">
+        {t.photoCredit} Runhild Heggem
+      </p>
+    </div>
+    <p set:html={t.p5} />
   </div>
 </main>
