@@ -15,14 +15,14 @@ export const translations = {
     faq: {
       title: "Ofte stilte spørsmål",
       q1: "Hvor arrangeres festivalen?",
-      a1: 'På <a href="https://neuf.no/praktisk#adkomst">Chateau Neuf</a>, Majorstuen, Oslo',
+      a1: 'På <a href="https://neuf.no/praktisk#adkomst">Chateau Neuf</a>, Majorstuen i Oslo',
       q2: "Hvem er festivalen for?",
       a2: "Alle nye og gamle studenter, men arrangementene er åpne for alle som ønsker å delta.",
       q3: "Koster det penger å delta?",
-      a3: "Gratis inngang hver dag og nesten alle arrangementene er gratis. Kun 2 arrangementer krever kjøp av billett.",
-      q4: "Må jeg har med student ID for å komme inn?",
+      a3: "Det er gratis inngang hver dag og nesten alle arrangementene er gratis. Kun 2 arrangementer krever kjøp av billett. Se programmet for mer informasjon.",
+      q4: "Må jeg har med student-ID for å komme inn?",
       a4: "Nei, men generell legitimasjon er påkrevd.",
-      q5: "Hva er alder årsgrensen på festivalen?",
+      q5: "Hva er aldersgrensen på festivalen?",
       a5: "Alt er ID18+",
     },
     about: {
@@ -36,7 +36,7 @@ export const translations = {
     },
     program: {
       today: "Hva skjer i dag?",
-      programMore: "For arrangementer etter STUDiO trykk her",
+      programMore: "For arrangementer etter STUDiO, trykk her",
       noProgram: "Ingenting på programmet i dag :(",
     },
     vors: {
@@ -69,7 +69,7 @@ export const translations = {
       q2: "Who is the festival for?",
       a2: "All new and returning students, but the events are open to everyone who wants to join.",
       q3: "Does it cost money?",
-      a3: "Free entry every day and almost all events are free. Only 2 events require a ticket.",
+      a3: "Free entry every day and almost all events are free. Only 2 events require a ticket. See the event schedule for more information.",
       q4: "Do I need a student ID to enter?",
       a4: "No, but general identification is required.",
       q5: "What is the age limit for the festival?",
@@ -86,7 +86,7 @@ export const translations = {
     },
     program: {
       today: "What's happening today?",
-      programMore: "For events after STUDiO click here",
+      programMore: "For events after STUDiO, click here",
       noProgram: "No events today :(",
     },
     vors: {
