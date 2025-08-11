@@ -5,8 +5,11 @@ import ProgramCard from './ProgramCard.astro';
 const { lang = 'no', data } = Astro.props as { lang?: Lang, data: any };
 const t = translations[lang];
 
-const today = new Date();
-today.setHours(0, 0, 0, 0);
+const now = new Date();
+const osloNow = new Date(
+  now.toLocaleString("en-US", { timeZone: "Europe/Oslo" })
+);
+osloNow.setHours(0, 0, 0, 0);
 ---
 
 {data ? (
@@ -14,19 +17,33 @@ today.setHours(0, 0, 0, 0);
     <h1 class="font-bold text-3xl text-center w-full">{t.nav.program}</h1>
   </div>
   <div class="flex gap-12 flex-wrap justify-center items-stretch">
-    {Object.entries(data).map(([date, items], idx) => (
-      <ProgramCard
-        date={date}
-        items={items}
-        lang={lang}
-        even={idx % 2 === 1}
-        isPast={new Date(date) < today}
-      />
-    ))}
+    {Object.entries(data).map(([date, items], idx) => {
+      const dateInOslo = new Date(
+        new Date(date).toLocaleString("en-US", { timeZone: "Europe/Oslo" })
+      );
+      dateInOslo.setHours(0, 0, 0, 0);
+
+      return (
+        <ProgramCard
+          date={date}
+          items={items}
+          lang={lang}
+          even={idx % 2 === 1}
+          isPast={dateInOslo < osloNow}
+        />
+      );
+    })}
   </div>
   <div class="flex justify-center">
     <p class="font-bold text-xl text-center w-full">
-      <a href="https://neuf.no/arrangementer" class="text-gyllen-oransje hover:text-slottsblaa hover:underline" target="_blank" rel="noopener noreferrer">{t.program.programMore}</a>
+      <a
+        href="https://neuf.no/arrangementer"
+        class="text-gyllen-oransje hover:text-slottsblaa hover:underline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {t.program.programMore}
+      </a>
     </p>
   </div>
 ) : (
