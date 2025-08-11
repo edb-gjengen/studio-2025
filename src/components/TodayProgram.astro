@@ -10,7 +10,15 @@ const t = translations[lang].program;
 
 const typedProgramData = programData as Record<string, any>;
 
-const todayStr = new Date().toISOString().slice(0, 10);
+const todayStr = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Europe/Oslo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+})
+  .format(new Date())
+  .replace(/(\d{4})-(\d{2})-(\d{2})/, "$1-$2-$3");
+
 const items = typedProgramData[todayStr];
 ---
 
