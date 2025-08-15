@@ -33,6 +33,7 @@
     { "time": "22:00", "event": "Silent Disco", "cost": "free" }
   ],
   "2025-08-15": [
+    { "time": "20:00", "event": "Toga party", "price": "free" },
     { "time": "21:00", "event": "Sing-a-long karaoke", "cost": "free" },
     { "time": "22:00", "event": "Afterparty", "cost": "free" },
     { "time": "22:00", "event": "Silent Disco", "cost": "free" }

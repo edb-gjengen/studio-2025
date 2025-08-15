@@ -37,6 +37,7 @@
     { "time": "22:00", "event": "Silent Disco", "price": "gratis" }
   ],
   "2025-08-15": [
+    { "time": "20:00", "event": "Togafest", "price": "gratis" },
     { "time": "21:00", "event": "Allsangkaraoke", "price": "gratis" },
     { "time": "22:00", "event": "Afterparty", "price": "gratis" },
     { "time": "22:00", "event": "Silent Disco", "price": "gratis" }
